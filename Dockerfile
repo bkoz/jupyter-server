@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi8/ubi
 LABEL maintainer="Bob Kozdemba <bkozdemba@gmail.com>"
 
-RUN yum install -y python3
+RUN yum install -y python39
 # WORKDIR /app
 # COPY ./requirements.txt ./app ./
 
