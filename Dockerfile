@@ -24,4 +24,4 @@ EXPOSE 8888
 
 # VOLUME ${APP_ROOT}/logs ${APP_ROOT}/models
 
-CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"
+CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser"]
