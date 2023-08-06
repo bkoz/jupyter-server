@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi8/ubi-minimal
 LABEL maintainer="Bob Kozdemba <bkozdemba@gmail.com>"
 
-RUN microdnf install -y python3 pip3
+RUN microdnf install -y python3
 # WORKDIR /app
 # COPY ./requirements.txt ./app ./
 
