@@ -14,7 +14,7 @@ ENV PATH=${APP_ROOT}/bin:${PATH} HOME=${APP_ROOT}
 WORKDIR ${APP_ROOT}/src
 COPY . ${APP_ROOT}/src
 
-RUN pip install jupyterlab
+RUN pip3 install jupyterlab
 
 ### Containers should NOT run as root as a good practice
 USER 1001
