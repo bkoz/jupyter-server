@@ -2,6 +2,8 @@ FROM registry.access.redhat.com/ubi8/ubi
 LABEL maintainer="Bob Kozdemba <bkozdemba@gmail.com>"
 
 RUN yum install -y python39
+RUN yum install -y https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
+
 # WORKDIR /app
 # COPY ./requirements.txt ./app ./
 
