@@ -2,7 +2,9 @@ FROM registry.access.redhat.com/ubi8/ubi
 LABEL maintainer="Bob Kozdemba <bkozdemba@gmail.com>"
 
 RUN yum install -y python39
-RUN yum install -y https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64
+RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc
+RUN sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+RUN yum install -y code 
 
 # WORKDIR /app
 # COPY ./requirements.txt ./app ./
